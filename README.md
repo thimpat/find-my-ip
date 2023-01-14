@@ -1,7 +1,7 @@
 
 ## Description
 
-Description here
+Try to best guess local ip
 
 <br/>
 
@@ -12,19 +12,20 @@ Description here
 ## Installation
 
 ```shell
-npm install find-ip
+npm install find-my-ip
 ```
 
 <br/>
 
 ---
 
-## Usage
+## Usage 
+#### JavaScript / Typescript
 
 ### CJS
 
 ```javascript
-const {...} = require("find-ip");
+const {findMyIp} = require("find-my-ip");
 ```
 
 <br/>
@@ -32,7 +33,7 @@ const {...} = require("find-ip");
 ### ESM
 
 ```javascript
-import {...} from "find-ip";
+import {findMyIp} from "find-my-ip";
 ```
 
 <br/>
@@ -41,8 +42,9 @@ import {...} from "find-ip";
 
 ## Overview
 
-
-...
+```javascript
+const localIp = findMyIp();     // 192.168.1.123
+```
 
 ---
 
@@ -53,11 +55,11 @@ import {...} from "find-ip";
 │
 └───📁 cjs
 │   │
-│   └─📝 index.cjs           ⇽ CJS version      - Browser (192 B unminified)
+│   └─📝 index.cjs           ⇽ CJS version      - Browser (4.7kB unminified)
 │   
 └───📁 esm
     │
-    └─📝 index.mjs           ⇽ ESM version      - Browser (192 B unminified)
+    └─📝 index.mjs           ⇽ ESM version      - Browser (4.7kB unminified)
 
 ```
 
