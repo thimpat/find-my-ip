@@ -173,7 +173,7 @@ const getIpInfoList = () =>
  * Try to best guess local ip
  * @returns {string|(() => AddressInfo)|(() => (AddressInfo | {}))|(() => (AddressInfo | string | null))|boolean}
  */
-export const findIp  = () =>
+export const findMyIp  = () =>
 {
     const list = getIpInfoList();
     return list[0].address;

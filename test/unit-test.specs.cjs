@@ -5,11 +5,11 @@
 const {expect} = require("chai");
 
 /** to-esm-esm: remove **/
-const {getIps, getIpList, findIp} = require("../cjs/index.cjs");
+const {getIps, getIpList, findMyIp} = require("../cjs/index.cjs");
 /** to-esm-esm: end-remove **/
 
 /** to-esm-esm: add
- import {getIps, getIpList, findIp} from "../esm/index.mjs";
+ import {getIps, getIpList, findMyIp} from "../esm/index.mjs";
  **/
 
 
@@ -37,7 +37,7 @@ describe("On cjs/index.cjs", () =>
     {
         it("should return an ip", async () =>
         {
-            const localIp = findIp();
+            const localIp = findMyIp();
             expect(localIp).to.match(/\d+\.\d+\.\d+\.\d+/);
         });
     });

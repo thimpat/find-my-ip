@@ -166,7 +166,7 @@ const getIpInfoList = () =>
  * Try to best guess local ip
  * @returns {string|(() => AddressInfo)|(() => (AddressInfo | {}))|(() => (AddressInfo | string | null))|boolean}
  */
-const findIp = () =>
+const findMyIp = () =>
 {
     const list = getIpInfoList();
     return list[0].address;
@@ -175,4 +175,4 @@ const findIp = () =>
 
 module.exports.getIps = getIps;
 module.exports.getIpList = getIpList;
-module.exports.findIp = findIp;
+module.exports.findMyIp = findMyIp;

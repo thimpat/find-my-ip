@@ -13,7 +13,7 @@ import {expect}  from "chai";
 
 
 
-import {getIps, getIpList, findIp} from "../esm/index.mjs";
+import {getIps, getIpList, findMyIp} from "../esm/index.mjs";
  
 
 
@@ -41,7 +41,7 @@ describe("On esm/index.esm", () =>
     {
         it("should return an ip", async () =>
         {
-            const localIp = findIp();
+            const localIp = findMyIp();
             expect(localIp).to.match(/\d+\.\d+\.\d+\.\d+/);
         });
     });
