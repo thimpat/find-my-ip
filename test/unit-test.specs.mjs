@@ -11,12 +11,39 @@ import {expect}  from "chai";
  */
 
 
+
+
+import {getIps, getIpList, findIp} from "../esm/index.mjs";
+ 
+
+
 describe("On esm/index.esm", () =>
 {
-    it("should work", function ()
+    describe("The function getIps", () =>
     {
-        const result = true;
-        expect(result).to.equal(true);
+        it("should return an ip", async () =>
+        {
+            const ips = getIps();
+            expect(Object.keys(ips).length).to.be.greaterThan(0);
+        });
+    });
+
+    describe("The function getIpList", () =>
+    {
+        it("should return a list of ips", async () =>
+        {
+            const ips = getIpList();
+            expect(ips.length).to.be.greaterThan(0);
+        });
+    });
+
+    describe("The function getLocalIp", () =>
+    {
+        it("should return an ip", async () =>
+        {
+            const localIp = findIp();
+            expect(localIp).to.match(/\d+\.\d+\.\d+\.\d+/);
+        });
     });
 
 });
