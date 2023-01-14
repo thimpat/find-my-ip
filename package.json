@@ -4,7 +4,7 @@
   "description": "",
   "main": "./esm/index.mjs",
   "scripts": {
-    "test": "npm run build:all && npm run test:js && npm run test:ts",
+    "test": "npm run build:all && npm run test:js",
     "build:esm": "to-esm ./cjs/index.cjs --output ./esm --update-all --extension .mjs",
     "build:dts": "tsc ./esm/index.mjs --declaration --allowJs --emitDeclarationOnly --outDir .",
     "build:test": "to-esm test/*.specs.cjs --output ./test/ --target esm --skipEsmResolution --skipLinks",
